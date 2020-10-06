@@ -12,11 +12,11 @@ export default class FavoriteButton extends Component {
     componentDidMount() {
         this.iconClass = this.favorite ? 'red-heart' : 'gray-heart';
         const value = this.props.isFavorite;
-        this.setState({ favorite: value, animate: value }); 
+        this.setState({ favorite: value, animate: value });
     }
 
     onClickIcon = () => {
-        const { favorite } = this.state; 
+        const { favorite } = this.state;
         const favoriteValue = !favorite;
         this.setState({ animate: favoriteValue, favorite: favoriteValue });
         if (favoriteValue) {

@@ -20,17 +20,13 @@ class Filters extends Component {
   }
 
   reset = () => {
-    if (this.state.name.trim()) {
-      this.setState({ name: '' });
-      this.props.onReset();
-    }
+    this.setState({ name: '' });
+    this.props.onReset();
   }
 
   submit = (event) => {
     event.preventDefault();
-    if (this.state.name.trim()) {
-      this.props.onApply();
-    }
+    this.props.onApply();
   }
 
   changeExactMatchFlag = (event) => {
@@ -46,31 +42,31 @@ class Filters extends Component {
 
   render() {
     return (
-        <form onSubmit={this.submit}>
-          <div className="row">
-            <div className="col-md-4">
-              <FormGroup controlId="filterByName">
-                <ControlLabel>Nome</ControlLabel>
-                <FormControl type="text"
-                             value={this.state.name}
-                             onChange={this.changeFilterByName}/>
-              </FormGroup>
-              <div className="favorite-button">
-                <FavoriteButton isFavorite={this.isFavorite} onLike={() => this.onFilterFavorite(true)} onUnlike={() => this.onFilterFavorite(false)} />
-              </div>
-              <div className="search-name">
-                <Checkbox checked={this.state.exactMatch}
-                          onChange={this.changeExactMatchFlag}>
+      <form onSubmit={this.submit}>
+        <div className="row">
+          <div className="col-md-4">
+            <FormGroup controlId="filterByName">
+              <ControlLabel>Nome</ControlLabel>
+              <FormControl type="text"
+                value={this.state.name}
+                onChange={this.changeFilterByName} />
+            </FormGroup>
+            <div className="favorite-button">
+              <FavoriteButton isFavorite={this.isFavorite} onLike={() => this.onFilterFavorite(true)} onUnlike={() => this.onFilterFavorite(false)} />
+            </div>
+            <div className="search-name">
+              <Checkbox checked={this.state.exactMatch}
+                onChange={this.changeExactMatchFlag}>
                 Buscar por nome específico
                 </Checkbox>
-              </div>
             </div>
           </div>
-          <ButtonToolbar>
-            <Button type="reset" onClick={this.reset}>Limpar</Button>
-            <Button type="submit" bsStyle="primary">Filtrar</Button>
-          </ButtonToolbar>
-        </form>
+        </div>
+        <ButtonToolbar>
+          <Button type="reset" onClick={this.reset}>Limpar</Button>
+          <Button type="submit" bsStyle="primary">Filtrar</Button>
+        </ButtonToolbar>
+      </form>
     );
   }
 }
