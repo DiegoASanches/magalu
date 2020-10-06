@@ -2,10 +2,12 @@
 
 Framework/lib: React 16.13.1
 
+
 ### Link para demonstração:
 
 https://magalu-test-diego.herokuapp.com/
 
+Por se tratar de um `link free`, o site pode demorar até 60 segundos para abrir.
 
 ### Instalação do projeto
 
