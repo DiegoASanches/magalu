@@ -19,7 +19,7 @@ Execute a aplicação no modo de desenvolvimento.
 Abra [http://localhost:3000](http://localhost:3000) para ver no browser.
 
 ```
-    $ npm run start
+    $ npm run start:dev
 ```
 
 ### Jest Tests
