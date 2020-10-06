@@ -1,0 +1,28 @@
+@import "../../variables";
+
+.Filters {
+  &.panel {
+    margin-bottom: 5px;
+
+    @media screen and (min-width: $screen-sm-min) {
+      margin-bottom: 20px;
+    }
+
+    &-heading:hover {
+      cursor: pointer;
+    }
+    &-title {
+      font-weight: 600;
+    }
+  }
+}
+
+.favorite-button {
+  display: flex;
+  float: left;
+}
+
+.search-name {
+  display: flex;
+  margin-top: 34px;
+}
